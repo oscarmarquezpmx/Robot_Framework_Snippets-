@@ -1,0 +1,17 @@
+pip install -U robotframework-jsonlibrary
+
+pip install -U robotframework-Requests
+
+pip install -U robotframework-DataDriver
+
+pip install -U robotframework-SeleniumLibrary
+
+pip install -U robotframework-reportportal
+
+pip install -U robotframework-JsonLibrary
+
+pip install rpaframework-google
+
+pip install robotframework-mailclient
+
+pip install -U robotframework-pabot
