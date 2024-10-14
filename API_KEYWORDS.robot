@@ -623,3 +623,13 @@ Get Dow Jones Status
     ...    headers=${headers}
     Should Be Equal As Strings    ${resp.status_code}    ${expected_status}
     RETURN    ${resp}
+
+
+TC (API) Schema Validation
+    ${resp}=    Get All Carts Response    ${email}    ${token}
+    ${message}=    Evaluate   str($resp.content, encoding='utf-8')
+    BuiltIn.Log To Console    ${message}
+    ${schema}    Get Binary File    ./SLB/TestCases/schemas/cartAllSchema.json
+    ${schema}    evaluate    json.loads('''${schema}''')    json
+    ${instance}    evaluate    json.loads('''${resp.content}''')    json
+    validate    instance=${instance}    schema=${schema}   
