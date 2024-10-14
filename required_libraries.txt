@@ -6,8 +6,6 @@ pip install -U robotframework-DataDriver
 
 pip install -U robotframework-SeleniumLibrary
 
-pip install -U robotframework-reportportal
-
 pip install -U robotframework-JsonLibrary
 
 pip install rpaframework-google
